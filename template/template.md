@@ -12,7 +12,7 @@ metadata:
     your_number: <出席番号>
     your_name: <氏名>
   table2:
-    collaborator: <共同実験者>
+    collaborators: <共同実験者>
   table3:
     reporting_date: x 月  x 日
     # re_reporting_date_r1: x 月  x 日

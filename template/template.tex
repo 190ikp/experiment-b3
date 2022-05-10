@@ -251,35 +251,42 @@ $endif$
 
 \vspace{3pt}
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-\endhead
-$metadata.table1.theme$ & &\tabularnewline
-$metadata.table1.date$ & &\tabularnewline
-$metadata.table1.group$ & $metadata.table1.your_number$ & $metadata.table1.your_name$ \tabularnewline
-\bottomrule
-\end{longtable}
+\begin{titletabular}
+  \begin{tabularx}
+    {\textwidth}{|m{23mm}X|}\hline
+    \parbox[l][10mm][c]{0pt}{}実験題目 & $metadata.table1.theme$ \\ \hline
+    \parbox[l][10mm][c]{0pt}{}実験日 & $metadata.table1.date$      \\ \hline
+  \end{tabularx}
+  \begin{tabularx}
+    {\textwidth}{|lX|lX|lX|}
+    \parbox[c][8mm][c]{0pt}{} 実験班 & $metadata.table1.group$ & 出席番号 & $metadata.table1.your_number$ & 氏名 & $metadata.table1.your_name$ \\ \hline
+  \end{tabularx}
+\end{titletabular}
 
-\begin{longtable}[]{@{}l@{}}
-\toprule
-\endhead
-$metadata.table2.collaborator$ \tabularnewline
-\bottomrule
-\end{longtable}
+\begin{tabularx}{\textwidth}{|m{26mm}X|}\hline
+  \parbox[c][10mm][c]{0pt}{}共同実験者氏名 & $metadata.table2.collaborators$\\ \hline
+\end{tabularx}
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-\endhead
-$metadata.table3.reporting_date$ & $metadata.table3.re_reporting_date_r1$ & $metadata.table3.re_reporting_date_r3$ \tabularnewline
-\bottomrule
-\end{longtable}
+\vspace{4mm}
 
-\begin{longtable}[]{@{}l@{}}
-\toprule
-\endhead
-実験担当者記入欄\tabularnewline
-\bottomrule
-\end{longtable}
+\begin{datetabular}
+  \begin{tabularx}{\textwidth}{|lX|lX|lX|}\hline
+    \parbox[c][8mm][c]{0pt}{}提出日 & $metadata.table3.reporting_date$ &
+    再提出日R1 & $metadata.table3.re_reporting_date_r1$ &
+    再提出日R2 & $metadata.table3.re_reporting_date_r2$ \\ \hline
+  \end{tabularx}
+\end{datetabular}
+
+\vspace{4mm}
+
+\begin{tabularx}{\textwidth}{|lX|}\hline
+  実験担当者記入欄 & \\
+                   & \\
+                   & \\
+                   & \\
+                   & \\
+                   & \\ \hline
+\end{tabularx}
 
 \thispagestyle{empty}
 \newpage
