@@ -244,75 +244,49 @@ $endif$
 \fontsize{11pt}{22pt}\selectfont
 
 \vspace*{-13pt}
-\begin{kotitle}
-  理工学基礎実験レポート
 
+\begin{kotitle}
+  情報工学実験第1AB レポート
 \end{kotitle}
 
-\vspace{19mm}
+\vspace{3pt}
 
 \begin{titletabular}
-\begin{tabularx}{\textwidth}{|m{23mm}|X|}\hline
-\parbox[c][9mm][c]{0pt}{}実験日 & $metadata.table1.date$ \\ \hline
-\parbox[c][9mm][c]{0pt}{}実験方式  & $metadata.table1.class_type$ \\ \hline
-\parbox[c][14mm][c]{0pt}{}実験題目  & $metadata.table1.theme$ \\ \hline
-\end{tabularx}
+  \begin{tabularx}
+    {\textwidth}{|m{23mm}X|}\hline
+    \parbox[l][10mm][c]{0pt}{}実験題目 & $metadata.table1.theme$ \\ \hline
+    \parbox[l][10mm][c]{0pt}{}実験日 & $metadata.table1.date$      \\ \hline
+  \end{tabularx}
+  \begin{tabularx}
+    {\textwidth}{|lX|lX|lX|}
+    \parbox[c][8mm][c]{0pt}{} 実験班 & $metadata.table1.group$ & 出席番号 & $metadata.table1.your_number$ & 氏名 & $metadata.table1.your_name$ \\ \hline
+  \end{tabularx}
 \end{titletabular}
 
-\vspace{8mm}
-
-% \begin{boldtabular}
-% \begin{tabularx}{\textwidth}{|l|l|X|l|X|l|X|}\hline
-% \parbox[c][10mm][c]{0pt}{} \multicolumn{2}{l}{学科}  & $metadata.table2.faculty$ & クラス & $metadata.table2.class$ & 学籍番号 & $metadata.table2.your_number$ \\  \hline
-% \parbox[c][16mm][c]{0pt}{}\textbf{報告者名}  & \multicolumn{6}{l|}{$metadata.table2.your_name$} \\ \hline
-% \end{tabularx}
-% \end{boldtabular}
-
-\begin{boldtabular}
-  \begin{table}[!h]
-    \hspace{1pt}
-    \begin{tabular}{l}
-      \begin{tabularx}{\textwidth}{|l|m{50mm}|l|m{12mm}|l|X|}\hline
-        \parbox[c][10.5mm][c]{0pt}{} 学科  & $metadata.table2.faculty$ & クラス & $metadata.table2.class$ & 学籍番号 & $metadata.table2.your_number$ \\
-      \end{tabularx}\\
-
-      \begin{tabularx}{\textwidth}{|m{23mm}|X|}\hline
-        \centering\fontsize{12pt}{18pt}\selectfont\textbf{報告者氏名}  & \parbox[c][16.5mm][c]{\textwidth}{{\fontsize{20pt}{30pt}\selectfont\textbf{$metadata.table2.your_name$}}} \\ \hline
-      \end{tabularx}
-    \end{tabular}
-  \end{table}
-\end{boldtabular}
-
-\vspace{8mm}
-
-\begin{narrowtabular}
-\begin{tabularx}{\textwidth}{|m{22mm}|X|X|}\hline
-  \multirow{4}{ 22mm }{共同実験者} & $metadata.table3.collaborator1$ & $metadata.table3.collaborator2$ \\ \cline{2-3}
- & $metadata.table3.collaborator3$ & $metadata.table3.collaborator4$ \\ \cline{2-3}
-& $metadata.table3.collaborator5$ & $metadata.table3.collaborator6$ \\ \cline{2-3}
-& $metadata.table3.collaborator7$ & $metadata.table3.collaborator8$ \\ \hline
+\begin{tabularx}{\textwidth}{|m{26mm}X|}\hline
+  \parbox[c][10mm][c]{0pt}{}共同実験者氏名 & $metadata.table2.collaborators$\\ \hline
 \end{tabularx}
-\end{narrowtabular}
 
-\vspace{10mm}
+\vspace{4mm}
 
 \begin{datetabular}
-\begin{tabularx}{\textwidth}{|l|X|}\hline
-\parbox[c][8mm][c]{0pt}{}レポート提出日 & $metadata.table4.reporting_date$ \\ \hline
-\parbox[c][8mm][c]{0pt}{}再レポート提出日 & $metadata.table4.re_reporting_date$ \\ \hline
-\parbox[c][8mm][c]{0pt}{} &  \\ \hline
-\end{tabularx}
+  \begin{tabularx}{\textwidth}{|lX|lX|lX|}\hline
+    \parbox[c][8mm][c]{0pt}{}提出日 & $metadata.table3.reporting_date$ &
+    再提出日R1 & $metadata.table3.re_reporting_date_r1$ &
+    再提出日R2 & $metadata.table3.re_reporting_date_r2$ \\ \hline
+  \end{tabularx}
 \end{datetabular}
 
-\vspace{12.5mm}
+\vspace{4mm}
 
-\begin{templaturetabular}
-\begin{tabular}{|m{13mm}|m{58mm}|}\hline
-\parbox[c][10mm][c]{0pt}{}\centering 室温 & $metadata.table5.temperature$ $if(metadata.table5.temperature)$\celsius $else$ $endif$ \\ \hline
-\parbox[c][10mm][c]{0pt}{}\centering 湿度 & $metadata.table5.humidity$ $if(metadata.table5.humidity)$\% $else$ $endif$ \\ \hline
-\parbox[c][10mm][c]{0pt}{}\centering 気圧 & $metadata.table5.pressure$ $if(metadata.table5.pressure)$hPa $else$ $endif$ \\ \hline
-\end{tabular}
-\end{templaturetabular}
+\begin{tabularx}{\textwidth}{|lX|}\hline
+  実験担当者記入欄 & \\
+                   & \\
+                   & \\
+                   & \\
+                   & \\
+                   & \\ \hline
+\end{tabularx}
 
 \thispagestyle{empty}
 \newpage
